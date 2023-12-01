@@ -42,3 +42,5 @@ function resta(num1, num2) {
     return num1 - num2
 }
 console.log(operacionMatematica(7, 14, resta))
+
+

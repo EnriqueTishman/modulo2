@@ -38,3 +38,4 @@ saludar("Enrique", "Tishman ")
 
 //Funcion anidada "asi no se ocupa en la actualidad" 
 asjdakjndakjsndjasndjand
+ que es lo que tengo que hacer para el push 

@@ -38,3 +38,7 @@ saludar("Enrique", "Tishman ")
 
 //Funcion anidada "asi no se ocupa en la actualidad" 
 
+function resta(num1, num2) {
+    return num1 - num2
+}
+console.log(operacionMatematica(7, 14, resta))

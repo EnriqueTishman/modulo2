@@ -1,0 +1,48 @@
+function paroimp(num){
+    if (num % 2 === 0){
+        return "par";
+    } else {
+        return "Impar";
+    }
+}
+
+console.log(paroimp(7))
+
+function areacirc(radio){
+    return 3.1416 * (radio)**2
+}
+
+console.log(areacirc(3))
+
+function raizCuadrada(num){
+    return num**2
+}
+
+function multiplicacion(num1, num2){
+    return num1 * num2
+}
+
+function operaciones(num1, num2, operacion){
+    console.log(operacion(num1,num2))
+}
+
+operaciones(4,3,multiplicacion)
+
+
+
+function area (radio) {
+    return 3.1416*(radio*radio)
+  }
+  console.log(area(4))
+
+function parImpar(numero) {
+    return (numero % 2 == 0) ? "Es par" : "Es impar"
+}
+
+console.log(parImpar(7));
+
+function areaCirculo(radio) {
+    return Math.PI * (Math.pow(radio, 2));
+}
+
+console.log(areaCirculo(5));

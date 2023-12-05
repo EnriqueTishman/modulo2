@@ -15,7 +15,7 @@ let persona1 = {
     nombre: "Pedro",
     edad: 29,
     localidad: "sur",
-    añoDeNacimiento: 1995,
+    añoDeNacimiento: 1993,
 
 }
 if (persona1.añoDeNacimiento <= 1993){

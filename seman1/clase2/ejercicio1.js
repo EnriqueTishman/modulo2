@@ -18,7 +18,7 @@ let persona1 = {
     añoDeNacimiento: 1993,
 
 }
-if (persona1.añoDeNacimiento <= 1993){
+if (persona1.añoDeNacimiento <= 1993 && persona1.localidad == "sur"){
     console.log("Te puedes vacunar");
 }else{
     console.log("Lo sentimos, todavia no te puedes vacunar")

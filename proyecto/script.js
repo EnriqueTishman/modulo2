@@ -1,37 +1,78 @@
-let persona = {
-    nombre: 'Enrique ',
-    primerApellido: 'Tishman ',
-    segundoApellido: 'Cordero ',
-    cliente: true,
-    numeroCliente: 11111,  //cinco veces 1
-    saldo: 5425,
-    nip: 3553,
-    cantidadRetiro: 5000
+let cuentas = [
+  { nombre: "Mali", saldo: 200, password: "claveMali" },
+  { nombre: "Gera", saldo: 290, password: "claveGera" },
+  { nombre: "Maui", saldo: 67, password: "claveMaui" }
+];
+
+// nuevo
+let saldoMinimo = 10;
+let saldoMaximo = 990;
+
+let cuentaSeleccionada;
+let saldo;
+
+function iniciarSesion() {
+  let seleccion = document.getElementById("cuentasDropdown").value;
+  let passwordIngresado = document.getElementById("password").value;
+
+  if (seleccion >= 0 && seleccion < cuentas.length) {
+    if (passwordIngresado === cuentas[seleccion].password) {
+      cuentaSeleccionada = cuentas[seleccion];
+      saldo = cuentaSeleccionada.saldo;
+
+      document.getElementById("opciones").style.display = "block";
+      document.getElementById("resultado").innerHTML = "";
+    } else {
+      alert("Contraseña incorrecta. Intenta nuevamente.");
+    }
+  }
+}
+
+function agregarNumero(numero) {
+  document.getElementById("password").value += numero;
+}
+
+function consultarSaldo() {
+  document.getElementById("resultado").innerHTML = "Saldo actual: $" + saldo;
+}
+
+
+function ingresarMonto() {
+  let monto = prompt("Ingresa el monto a ingresar:");
+  monto = parseFloat(monto);
+
+  if (!isNaN(monto) && monto && saldo <! saldoMinimo ) {
+    saldo += monto;
+    document.getElementById("resultado").innerHTML = "Ingresaste $" + monto + ". Nuevo saldo: $" + saldo;
+  }else {
+    alert("El saldo no puede ser menor a $10 y mayor a  $990.");
+  }
+} 
+
+
+
+
+
+
+
+
+
+
+
+function retirarMonto() {
+  let monto = prompt("Ingresa el monto a retirar:");
+  monto = parseFloat(monto);
+
+  if (!isNaN(monto) && monto > 0 && monto <= saldo && monto <= 990 && monto >= 10) {
+    saldo -= monto;
+    document.getElementById("resultado").innerHTML = "Retiraste $" + monto + ". Nuevo saldo: $" + saldo;
+  } else {
+    alert("El saldo resultante no puede ser menor a $" + saldoMinimo + " ni mayor a $" + saldoMaximo);
+  } 
 }
 
 
 
 
 
-if(persona.numeroCliente == '11111' && persona.nip == '3553' ){
-    console.log("Bienvenido " + persona.nombre + persona.primerApellido + persona.segundoApellido)
-}else{
-    alert
-    console.log('Lo sentimos, revisa tus datos')
-}
-
-if(persona.saldo >= persona.cantidadRetiro){
-   console.log('RETIRO EXITOSO POR $' + persona.cantidadRetiro)
-}else{
-    console.log('FONDOS INSUFICEINTES')
-}
-
-
-function resta(num1,num2 ){
-    console.log (persona.saldo, - persona.cantidadRetiro)
-}
-resta(persona.saldo - persona.cantidadRetiro)
-
-
-console.log('Saldo actual en la cuenta $' + (persona.saldo-persona.cantidadRetiro));
 

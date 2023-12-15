@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+ 
 }
 
 body {
@@ -12,20 +13,26 @@ body {
   #cajero {
     max-width: 800px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 100px;
     border: 3px solid orange;
     border-radius: 8px;
     background-color: rgb(82, 81, 81);
+    
     
   }
   
   button {
     margin-top: 10px;
+    background-color: black;
+    color: orange;
+    width: 90px;
+    height: 40px;
   }
   
   .sun{
     color: orange;
     font-size: 50px;
+    background-color:rgb(82, 81, 81);
   }
   #cuentasDropdown{
     width: 100px;
@@ -34,9 +41,19 @@ body {
 
   .ingresapassword{
     margin-bottom: 200px;
-    color: whitesmoke;
+    color: orange;
+    background-color: rgb(82, 81, 81);
+    
   }
 
   .opciones{
     color: orange;
+  }
+
+  .title{
+    margin-top: 70px;
+    font-size: 70px;
+    color: black;
+    font-style: italic;
+
   }

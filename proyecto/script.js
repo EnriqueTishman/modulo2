@@ -4,7 +4,6 @@ let cuentas = [
   { nombre: "Maui", saldo: 67, password: "claveMaui" }
 ];
 
-// nuevo
 let saldoMinimo = 10;
 let saldoMaximo = 990;
 
@@ -36,7 +35,6 @@ function consultarSaldo() {
   document.getElementById("resultado").innerHTML = "Saldo actual: $" + saldo;
 }
 
-
 function ingresarMonto() {
   let monto = prompt("Ingresa el monto a ingresar:");
   monto = parseFloat(monto);
@@ -48,16 +46,6 @@ function ingresarMonto() {
     alert("El saldo no puede ser menor a $10 y mayor a  $990.");
   }
 } 
-
-
-
-
-
-
-
-
-
-
 
 function retirarMonto() {
   let monto = prompt("Ingresa el monto a retirar:");

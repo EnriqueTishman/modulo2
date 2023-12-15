@@ -51,7 +51,7 @@ function retirarMonto() {
   let monto = prompt("Ingresa el monto a retirar:");
   monto = parseFloat(monto);
 
-  if (!isNaN(monto) && monto > 0 && monto <= saldo && saldo + monto <= 990 && saldo + monto >= 10) {
+  if (!isNaN(monto) && monto > 0 && monto <= saldo && saldo - monto >= saldoMinimo) {
     saldo -= monto;
     document.getElementById("resultado").innerHTML = "Retiraste $" + monto + ". Nuevo saldo: $" + saldo;
   } else {

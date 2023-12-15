@@ -43,7 +43,7 @@ function ingresarMonto() {
     saldo += monto;
     document.getElementById("resultado").innerHTML = "Ingresaste $" + monto + ". Nuevo saldo: $" + saldo;
   }else {
-    alert("El saldo no puede ser menor a $10 y mayor a  $990.");
+    alert("El saldo no puede ser mayor a  $990.");
   }
 } 
 
@@ -55,6 +55,6 @@ function retirarMonto() {
     saldo -= monto;
     document.getElementById("resultado").innerHTML = "Retiraste $" + monto + ". Nuevo saldo: $" + saldo;
   } else {
-    alert("El saldo resultante no puede ser menor a $" + saldoMinimo + " ni mayor a $" + saldoMaximo);
+    alert("El saldo no puede ser menor a $" + saldoMinimo );
   } 
 }
